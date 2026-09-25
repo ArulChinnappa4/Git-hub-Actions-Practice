@@ -8,9 +8,16 @@ jobs:
        steps:
           - name : Checkout code
             uses : actions/checkout@v4
-          - name : Printing Folders
-            run : ls
-
+          - name : Setup Node
+            uses : actions/setup-node@v3
+            with:
+              node-version : '20.x'
+          - name : Install Dependencies
+            run  : npm ci
+            working-directory : 05-sing-Pre-Built-Actions/react-app
+          - name : Run Unit Tests 
+            run : npm run test
+            working-directory : 05-sing-Pre-Built-Actions/react-app
 
 # 1. Checkout the code from the repository
 # 2. Install deps of our react application
