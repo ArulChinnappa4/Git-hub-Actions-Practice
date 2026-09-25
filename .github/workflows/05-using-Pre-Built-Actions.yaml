@@ -14,10 +14,10 @@ jobs:
               node-version : '20.x'
           - name : Install Dependencies
             run  : npm ci
-            working-directory : 05-sing-Pre-Built-Actions/react-app
+            working-directory : 05-using-Pre-Built-Actions/react-app
           - name : Run Unit Tests 
             run : npm run test
-            working-directory : 05-sing-Pre-Built-Actions/react-app
+            working-directory : 05-using-Pre-Built-Actions/react-app
 
 # 1. Checkout the code from the repository
 # 2. Install deps of our react application
