@@ -28,18 +28,30 @@ jobs:
                echo "Workflow : ${{github.workflow}}"
                echo "Run number : ${{github.run_number}}"
             - name : Retrieve Variable
+              # MY_VAR is stored as variables in Github
               run : |
                    echo "Variable value : ${{vars.MY_VAR}}"
             - name : Print Env Variables
               env :
                   MY_OVERWITTEN_VAR : "step"
+              # Step level scope, prints step
               run : |
                   echo " Workflow env : ${{env.MY_WORKFLOW_VAR}}"
                   echo " Overwritten env : ${{env.MY_OVERWITTEN_VAR}}"
             - name : Print Env Variables
-
+              # This is under Job level scope, So it prints Job
               run : |
                   echo " Workflow env : ${{env.MY_WORKFLOW_VAR}}"
                   echo " Overwritten env : ${{env.MY_OVERWITTEN_VAR}}"
+
+    echo-data2:
+      runs-on : ubuntu-latest
+      steps:
+        - name : Print Env Variables
+          # Traditional Shell Variable, workflow level scope, prints workflow
+          run : |
+            echo " workflow env : $MY_workflow_VAR"
+            echo " Overwrittern env : $MY_OVERWITTEN_VAR" 
+            
               
 
