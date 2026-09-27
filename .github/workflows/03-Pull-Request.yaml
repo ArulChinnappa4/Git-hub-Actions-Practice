@@ -1,5 +1,6 @@
 name: Pull Request Workflow
 
+# pull_request : when a branch gives pull request to the main.
 on:
   pull_request:
 

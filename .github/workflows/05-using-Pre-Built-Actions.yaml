@@ -8,15 +8,21 @@ jobs:
        steps:
        # 1. Checkout the code from the repository
           - name : Checkout code
+            # actions : denotes we are going to use "actions" and checkout@v4 is the pre-built action
+            # checkout@v4 action contains instructions or commands that are needed to checkout the code from the repository
             uses : actions/checkout@v4
 
        # 2. Install deps of our react application
           - name : Setup Node
+            # setup-node@v3 is the pre-built actions which includes commands/instructions needed to install and setup node in the appropriate machine
             uses : actions/setup-node@v3
+            # "with" denotes additional information for "uses", here it donotes "install and setup node version 20.x"
             with:
               node-version : '20.x'
           - name : Install Dependencies
+            # ci(clean install) install dependencies directly from package-lock.json file
             run  : npm ci
+            # "working directory" indicates the current working directory
             working-directory : 05-using-Pre-Built-Actions/react-app
 
        # 3. Execute automated tests

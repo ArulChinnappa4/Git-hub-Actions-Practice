@@ -1,14 +1,23 @@
 # Github Action Plugin should be installed
+#Name of the Workflow
 name : 01-Building Blocks
 
+# Trigger
 on: push
 
+#jobs - The tasks
 jobs:
+    # Task - 1
     echo-hello:
+        # The machine that github will use
         runs-on : ubuntu-latest
+        # These are the steps that is going to happen in the machine
         steps:
+              # Name for the steps 
             - name : Say hello
+              # Run this command on the Machine(Ubuntu) shell
               run: echo "Hello, world!"
+    # Task - 2
     echo-goodbye:
         runs-on : ubuntu-latest
         steps:

@@ -6,6 +6,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Show the trigger
+              # ${{github.event_name}} is a contests used in Github Action , we will see later
               run: echo " I've been triggered by a{n} ${{github.event_name}}."
             
 # So when you push code to GitHub:

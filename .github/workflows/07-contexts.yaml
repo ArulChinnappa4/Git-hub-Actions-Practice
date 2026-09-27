@@ -1,9 +1,12 @@
 name : 06-Contexts
+# using inputs
 run-name : 06-contexts | DEBUG - ${{ inputs.debug }}
 
 on : 
   push :
+  # "workflow_dispatch allows manual trigger"
   workflow_dispatch:
+        # creates a checkbox in github Actions
         inputs :
            debug :
              type : boolean

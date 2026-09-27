@@ -7,6 +7,7 @@ jobs:
         runs-on : ubuntu-latest
         steps:
             - name: Show OS
+              # $RUNNER_OS is one of the traditional shell commands for Linux OS
               run: |
                 echo "Running GitHub Runner..."
                 echo "Machine : $RUNNER_OS"
@@ -14,6 +15,7 @@ jobs:
         runs-on : windows-latest
         steps:
          - name: Show OS
+           # If we want to use $RUNNER_OS in windows , we should use "shell : bash"
            shell: bash
            run: |
                 echo "Running GitHub Runner..."

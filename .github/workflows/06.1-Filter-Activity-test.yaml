@@ -2,6 +2,7 @@ name: 05-2-Event Filters and Activity Types
 
 on:
    pull_request:
+   # whenever the pull request gets closed
      types:
        - closed
      branches :

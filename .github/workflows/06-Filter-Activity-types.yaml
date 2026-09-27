@@ -2,6 +2,8 @@ name: 05-1-Event Filters and Activity Types
 
 on:
    pull_request:
+     # "opened" : whenever a pull request is performed 
+     # "synchronized" : pull request’s source branch was updated, usually because someone pushed new commits to it. GitHub then runs the workflow again.
      types:
        - opened
        - synchronized
