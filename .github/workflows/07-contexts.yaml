@@ -37,12 +37,12 @@ jobs:
               # Step level scope, prints step
               run : |
                   echo " Workflow env : ${{env.MY_WORKFLOW_VAR}}"
-                  echo " Overwritten env : ${{env.MY_OVERWITTEN_VAR}}"
+                  echo " Overwritten env : ${{env.MY_OVERWRITTEN_VAR}}"
             - name : Print Env Variables
               # This is under Job level scope, So it prints Job
               run : |
                   echo " Workflow env : ${{env.MY_WORKFLOW_VAR}}"
-                  echo " Overwritten env : ${{env.MY_OVERWITTEN_VAR}}"
+                  echo " Overwritten env : ${{env.MY_OVERWRITTEN_VAR}}"
 
     echo-data2:
       runs-on : ubuntu-latest
