@@ -50,8 +50,8 @@ jobs:
         - name : Print Env Variables
           # Traditional Shell Variable, workflow level scope, prints workflow
           run : |
-            echo " workflow env : $MY_workflow_VAR"
-            echo " Overwrittern env : $MY_OVERWITTEN_VAR" 
+            echo " workflow env : $MY_WORKFLOW_VAR"
+            echo " Overwrittern env : $MY_OVERWRITTEN_VAR" 
             
               
 
